@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Career | Babar Azam</title>
+    <style>
+        :root {
+            --stadium-green: #0a5c36;
+            --electric-green: #00ff73;
+            --dark-pitch: #09120e;
+            --glass-card: rgba(18, 38, 28, 0.6);
+            --text-light: #ffffff;
+            --text-gray: #a3b8cc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial Black', Impact, sans-serif;
+            background: radial-gradient(circle at center, #143525 0%, var(--dark-pitch) 100%);
+            color: var(--text-light);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            overflow-x: hidden;
+        }
+
+        .portfolio-card {
+            max-width: 850px;
+            width: 100%;
+            background: var(--glass-card);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 255, 115, 0.15);
+            border-radius: 24px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6), 
+                        inset 0 0 20px rgba(0, 255, 115, 0.05);
+        }
+
+       h1 {
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    background: linear-gradient(180deg, #fff 40%, #8da397 100%);
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    -webkit-text-fill-color: transparent;
+}
+
+
+      
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+
+        .stat-box {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 15px 10px;
+            transition: all 0.3s ease;
+        }
+
+        .stat-box:hover {
+            border-color: var(--electric-green);
+            background: rgba(0, 255, 115, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .stat-number {
+            font-size: 1.6rem;
+            color: var(--electric-green);
+            display: block;
+        }
+
+        .stat-label {
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-gray);
+            margin-top: 4px;
+        }
+
+        .content-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 30px;
+            align-items: start;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .image-container {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .image-container:hover img {
+            transform: scale(1.04);
+        }
+
+        .biography-text {
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--text-gray);
+            text-align: justify;
+        }
+
+        .highlight {
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        .navigation-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+        }
+
+        .btn-action {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--text-light);
+            background: linear-gradient(135deg, var(--stadium-green) 0%, #063d23 100%);
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(0, 255, 115, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn-action:hover {
+            background: var(--electric-green);
+            color: var(--dark-pitch);
+            border-color: var(--electric-green);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 255, 115, 0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-light);
+            border-color: var(--text-light);
+            box-shadow: none;
+        }
+
+        @media (max-width: 768px) {
+            .content-layout {
+                grid-template-columns: 1fr;
+            }
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            h1 { font-size: 2.2rem; }
+            .portfolio-card { padding: 25px 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="portfolio-card">
+        <h1>Test Career</h1>
+        
+       
+        <div class="stats-grid">
+            <div class="stat-box">
+                <span class="stat-number">62</span>
+                <span class="stat-label">Matches</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number">4,481</span>
+                <span class="stat-label">Total Runs</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number">196</span>
+                <span class="stat-label">Highest Score</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number">9 / 31</span>
+                <span class="stat-label">100s / 50s</span>
+            </div>
+        </div>
+
+        <div class="content-layout">
+            <div class="image-container">
+               
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-fSIkgRd_71OkugJfGKR0tqEclsQiQpOVEpQhVUy408LQK2sv4EiMh2b7&s=10" alt="Babar Azam directing fields in Pakistan Test match whites">
+            </div>
+
+            <p class="biography-text">
+                Babar Azam launched his Test match career on <span class="highlight">October 13, 2016</span>, making his debut against the West Indies in a day/night Test match in Dubai, where he distinguished himself as the first player in cricket history to score a debut fifty under lights. 
+                <br><br>
+                Across 62 Test matches for Pakistan, he has accumulated 4,481 runs at a solid batting average of 42.68, functioning primarily as the technical cornerstone of the national top order. His international pedigree is headlined by an epic, career-best individual score of <span class="highlight">196 against Australia at Karachi in 2022</span>.
+                <br><br>
+                Known for his serene patience and text-book strokeplay, Babar ascended to a peak ICC career ranking of World No. 2 in the longest format. He led the red-ball side as <span class="highlight">Pakistan's Test captain in 20 matches</span>, instilling stability during a transitional era before navigating a highly publicized, challenging form slump in recent multi-day cycles.
+            </p>
+        </div>
+        
+       
+        <div class="navigation-row">
+            <a href="odi.html" class="btn-action btn-secondary">
+                &larr; Back
+            </a>
+            <a href="index.html" class="btn-action">
+                Return Home &cularr;
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

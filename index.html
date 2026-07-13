@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibrahim's Portfolio | Babar Azam</title>
+    <style>
+        :root {
+            --stadium-green: #0a5c36;
+            --electric-green: #00ff73;
+            --dark-pitch: #09120e;
+            --glass-card: rgba(18, 38, 28, 0.6);
+            --text-light: #ffffff;
+            --text-gray: #a3b8cc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial Black', Impact, sans-serif;
+            background: radial-gradient(circle at center, #143525 0%, var(--dark-pitch) 100%);
+            color: var(--text-light);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .portfolio-card {
+            max-width: 750px;
+            width: 100%;
+            background: var(--glass-card);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 255, 115, 0.15);
+            border-radius: 24px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6), 
+                        inset 0 0 20px rgba(0, 255, 115, 0.05);
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            line-height: 1;
+            margin-bottom: 5px;
+            background: linear-gradient(180deg, #fff 40%, #8da397 100%);
+           
+            -webkit-text-fill-color: transparent;
+        }
+
+        .sub-badge {
+            display: inline-block;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--dark-pitch);
+            background-color: var(--electric-green);
+            padding: 4px 12px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 15px rgba(0, 255, 115, 0.4);
+        }
+
+        .intro-paragraph {
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: var(--text-gray);
+            max-width: 620px;
+            margin: 0 auto 35px auto;
+        }
+
+        .intro-paragraph strong {
+            color: var(--text-light);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .image-container {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
+
+        .image-container::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(9, 18, 14, 0.8) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .image-container:hover img {
+            transform: scale(1.04);
+        }
+
+        .btn-action {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--text-light);
+            background: linear-gradient(135deg, var(--stadium-green) 0%, #063d23 100%);
+            padding: 16px 36px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(0, 255, 115, 0.3);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .btn-action:hover {
+            background: var(--electric-green);
+            color: var(--dark-pitch);
+            border-color: var(--electric-green);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(0, 255, 115, 0.25);
+        }
+
+        .btn-action span {
+            margin-left: 8px;
+            transition: transform 0.2s ease;
+        }
+
+        .btn-action:hover span {
+            transform: translateX(4px);
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2.2rem; }
+            .portfolio-card { padding: 25px 20px; }
+            .intro-paragraph { font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="portfolio-card">
+        <h1>My Portfolio</h1>
+        <div class="sub-badge">Presented by Ibrahim</div>
+        
+        <p class="intro-paragraph">
+            Hello, I am Ibrahim. Today I am going to discuss the journey of one of the most successful cricketers of Pakistan, <strong>Babar Azam</strong>.
+        </p>
+        
+        <div class="image-container">
+           
+            <img src="https://media.crictracker.com/media/featureimage/Babar-Azam.jpg" alt="Babar Azam celebrating century">
+        </div>
+        
+        <a href="early.html" class="btn-action">
+            Explore His Early Days <span>&rarr;</span>
+        </a>
+    </div>
+
+</body>
+</html>
